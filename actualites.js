@@ -1,4 +1,4 @@
-fetch('data/actualites.json')
+fetch('actualites.json')
   .then(response => {
     if (!response.ok) {
       throw new Error("Erreur lors du chargement des actualités.");
@@ -32,4 +32,5 @@ fetch('data/actualites.json')
   })
   .catch(error => {
     console.error("Erreur :", error);
+
   });
