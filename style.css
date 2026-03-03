@@ -324,7 +324,49 @@ body.dark-mode .page-hero {
 }
 
 
+.grid-actualites {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+.carte {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.carte:hover {
+  transform: translateY(-5px);
+}
 
 
+.form-pro {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
+.form-pro input,
+.form-pro textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
 
+.form-pro button {
+  padding: 12px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-pro button:hover {
+  background: #004c99;
+}
