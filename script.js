@@ -75,6 +75,32 @@ if (container) {
 }
 
 
+// GALERIE LIGHTBOX
+const images = document.querySelectorAll(".gallery-item img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+
+if (images.length > 0) {
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        });
+    });
+}
+
+if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+}
+
+window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        lightbox.style.display = "none";
+    }
+});
 
 
 
