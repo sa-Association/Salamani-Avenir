@@ -103,5 +103,46 @@ window.addEventListener("keydown", (e) => {
 });
 
 
+// Animation apparition
+const elements = document.querySelectorAll(".fade-in");
+
+const reveal = () => {
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add("visible");
+        }
+    });
+};
+
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
+
+// Message succès Formspree
+const form = document.querySelector(".pro-form");
+const successMessage = document.getElementById("successMessage");
+
+if (form) {
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const data = new FormData(form);
+
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            successMessage.style.display = "block";
+            form.reset();
+        } else {
+            alert("Erreur lors de l'envoi.");
+        }
+    });
+}
 
 
