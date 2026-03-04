@@ -22,41 +22,49 @@
 </div>
 </section>
 
-<section class="form-section">
+<section class="form-section fade-in">
   <div class="form-container">
 
     <h2>Formulaire d’adhésion</h2>
 
-    <form class="pro-form">
+    <form class="pro-form"
+          action="https://formspree.io/f/xykdqqjp"
+          method="POST">
 
-      <div class="form-group">
-        <label>Nom complet</label>
-        <input type="text" placeholder="Votre nom complet" required>
+      <!-- Protection anti-spam cachée -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <div class="input-icon">
+        <i class="fa fa-user"></i>
+        <input type="text" name="nom" placeholder="Nom complet" required>
       </div>
 
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="Votre email" required>
+      <div class="input-icon">
+        <i class="fa fa-envelope"></i>
+        <input type="email" name="email" placeholder="Email" required>
       </div>
 
-      <div class="form-group">
-        <label>Téléphone</label>
-        <input type="tel" placeholder="Votre numéro">
+      <div class="input-icon">
+        <i class="fa fa-phone"></i>
+        <input type="tel" name="telephone" placeholder="Téléphone">
       </div>
 
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Votre message..." rows="5"></textarea>
+      <div class="input-icon textarea-icon">
+        <i class="fa fa-comment"></i>
+        <textarea name="message" placeholder="Votre message..." rows="5"></textarea>
       </div>
 
       <button type="submit" class="btn-submit">
         Envoyer la demande
       </button>
 
+      <p class="success-message" id="successMessage">
+        ✅ Votre message a été envoyé avec succès !
+      </p>
+
     </form>
   </div>
 </section>
-
 <footer>
 <div class="container">
     © 2026 Salamani Avenir - Tous droits réservés
@@ -66,3 +74,4 @@
 </body>
 
 </html>
+
