@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact - Salamani Avenir</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -32,17 +33,48 @@
 </div>
 </section>
 
-<section class="form-section">
-<div class="container">
+<section class="form-section fade-in">
+  <div class="form-container">
 
-<form action="https://formspree.io/f/xxxxx" method="POST" class="contact-form">
-    <input type="text" name="nom" placeholder="Votre nom" required>
-    <input type="email" name="email" placeholder="Votre email" required>
-    <textarea name="message" rows="5" placeholder="Votre message"></textarea>
-    <button type="submit" class="btn">Envoyer le message</button>
-</form>
+    <h2>Contactez-nous</h2>
 
-</div>
+    <form class="pro-form"
+          action="https://formspree.io/f/xykdqqjp"
+          method="POST">
+
+      <!-- Protection anti-spam cachée -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <div class="input-icon">
+        <i class="fa fa-user"></i>
+        <input type="text" name="nom" placeholder="Nom complet" required>
+      </div>
+
+      <div class="input-icon">
+        <i class="fa fa-envelope"></i>
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+
+      <div class="input-icon">
+        <i class="fa fa-phone"></i>
+        <input type="tel" name="telephone" placeholder="Téléphone">
+      </div>
+
+      <div class="input-icon textarea-icon">
+        <i class="fa fa-comment"></i>
+        <textarea name="message" placeholder="Votre message..." rows="5"></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        Envoyer la demande
+      </button>
+
+      <p class="success-message" id="successMessage">
+        ✅ Votre message a été envoyé avec succès !
+      </p>
+
+    </form>
+  </div>
 </section>
 
 <footer>
@@ -53,4 +85,5 @@
 
 <script src="script.js"></script>
 </body>
+
 </html>
