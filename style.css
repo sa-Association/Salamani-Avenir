@@ -544,3 +544,21 @@ body.dark-mode .page-hero {
     font-weight: 600;
     margin-top: 15px;
 }
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.credit {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.strong {
+    color: white;
+    font-weight: 500;
+    margin-top: 40px;
+    background: #0f172a;
+}
