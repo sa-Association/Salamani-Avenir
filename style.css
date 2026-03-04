@@ -494,3 +494,53 @@ body.dark-mode .page-hero {
     background: #005fcc;
     transform: translateY(-2px);
 }
+
+/* Animation apparition */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Champs avec icônes */
+.input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 15px;
+    color: #0077ff;
+}
+
+.input-icon input,
+.input-icon textarea {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s ease;
+}
+
+.input-icon input:focus,
+.input-icon textarea:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 10px rgba(0,119,255,0.2);
+    outline: none;
+}
+
+/* Message succès */
+.success-message {
+    display: none;
+    text-align: center;
+    color: green;
+    font-weight: 600;
+    margin-top: 15px;
+}
